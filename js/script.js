@@ -1,8 +1,8 @@
 // Creare uno slider di immagini (JQ)
 
-// Soluzione 1
+// SOLUZIONE 1 (slider in loop)
 
-function prevClick(){
+/*function prevClick(){
     //console.log('test img precedente');
 
     var activeImg = $('.active');
@@ -46,8 +46,48 @@ function init() {
 
 }
 
+$(document).ready(init);*/
+
+
+
+// SOLUZIONE 2 (blocco slider alla prima e ultima img)
+
+function prevClick(){
+    //console.log('test img precedente');
+
+    var activeImg = $('.active');
+
+    if(activeImg.hasClass('first')) {
+
+        $('.prev .fas').unbind('click');    // disabilito "click"
+    } else {
+
+        var prevImg = activeImg.prev ('img');
+
+        activeImg.removeClass('active');
+        prevImg.addClass('active');
+    }
+}
+
+function nextClick(){
+    //console.log('test img successiva');
+
+    var activeImg = $('.active');
+
+    if(activeImg.hasClass('last')) {
+
+        $('.next .fas').unbind('click');    // disabilito "click"
+    } else {
+        var nextImg = activeImg.next('img');
+
+        activeImg.removeClass('active');
+        nextImg.addClass('active');
+    }
+}
+
+function init() {
+    $('.prev').click(prevClick);
+    $('.next').click(nextClick);
+
+}
 $(document).ready(init);
-
-
-
-// Soluzione 2
