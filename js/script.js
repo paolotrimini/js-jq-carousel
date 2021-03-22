@@ -77,6 +77,8 @@ function nextClick(){
     if(activeImg.hasClass('last')) {
 
         $('.next .fas').unbind('click');    // disabilito "click"
+        $('.next .fa-angle-right').addClass('js-arrow-right');      // test colore freccia
+
     } else {
         var nextImg = activeImg.next('img');
 

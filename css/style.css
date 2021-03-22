@@ -56,3 +56,9 @@
 .nav > i.active {
     color: blue;
 }
+
+/* classi JS aggiuntive */
+
+.js-arrow-right, .js-arrow-left  {
+    color: grey;
+}
