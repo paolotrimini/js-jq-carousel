@@ -5,11 +5,11 @@
 function prevClick(){
     console.log('test img precedente');
 
-    var activeImg = $('.active');               // immag. corrente
-    var prevImg = activeImg.next('img');  // "attivo" immag. successiva
+    var activeImg = $('.active');
+    var prevImg = activeImg.next('img');
 
-    activeImg.removeClass('active');        // rimuovo classe immag. corrente
-    prevImg.addClass('active');             // "consegno" la classe a immag. successiva
+    activeImg.removeClass('active');
+    prevImg.addClass('active');
 
 }
 
