@@ -3,7 +3,13 @@
 // Soluzione 1
 
 function prevClick(){
-    //console.log('test img precedente');
+    console.log('test img precedente');
+
+    var activeImg = $('.active');               // immag. corrente
+    var prevImg = activeImg.next('img');  // "attivo" immag. successiva
+
+    activeImg.removeClass('active');        // rimuovo classe immag. corrente
+    prevImg.addClass('active');             // "consegno" la classe a immag. successiva
 
 }
 
