@@ -3,25 +3,41 @@
 // Soluzione 1
 
 function prevClick(){
-    console.log('test img precedente');
+    //console.log('test img precedente');
 
     var activeImg = $('.active');
-    var prevImg = activeImg.next('img');
 
-    activeImg.removeClass('active');
-    prevImg.addClass('active');
+    if(activeImg.hasClass('first')) {
 
+        var prevImg = $('img.last');
+
+        activeImg.removeClass('active');
+        prevImg.addClass('active');
+    } else {
+
+        var prevImg = activeImg.prev ('img');
+
+        activeImg.removeClass('active');
+        prevImg.addClass('active');
+    }
 }
 
 function nextClick(){
-    console.log('test img successiva');
+    //console.log('test img successiva');
 
-    var activeImg = $('.active');               // immag. corrente
-    var nextImg = activeImg.next('img');  // "attivo" immag. successiva
+    var activeImg = $('.active');
 
-    activeImg.removeClass('active');        // rimuovo classe immag. corrente
-    nextImg.addClass('active');             // "consegno" la classe a immag. successiva
+    if(activeImg.hasClass('last')) {
+        var nextImg = $('img.first');
 
+        activeImg.removeClass('active');
+        nextImg.addClass('active');
+    } else {
+        var nextImg = activeImg.next('img');
+
+        activeImg.removeClass('active');
+        nextImg.addClass('active');
+    }
 }
 
 function init() {
