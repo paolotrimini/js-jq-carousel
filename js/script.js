@@ -1,20 +1,22 @@
-
-// Generare, tramite utilizzo di Jquery, lo slider immagini.
-
+// Creare uno slider di immagini (JQ)
 
 
-function nextClick() {      // img successiva
 
-}
-
-function prevClick() {      // img precedente
+function prevClick(){
+    console.log('test img precedente');
 
 }
 
+function nextClick(){
+    console.log('test img successiva');
+
+
+}
 
 function init() {
-    $('.next').click(nextClick);
     $('.prev').click(prevClick);
+    $('.next').click(nextClick);
 
 }
+
 $(document).ready(init);
